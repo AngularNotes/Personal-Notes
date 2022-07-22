@@ -1,0 +1,27 @@
+<!-- Property Binding -->
+<input type="text" [value]="xyz">
+<br> <br>
+
+<input type="text" [value]="abc">
+<br><br>
+
+<!-- Interpolation -->
+<input type="text" value="{{xyz}}">
+<br><br>
+
+<!-- Event Binding -->
+<button class="btn-primary" (click)="onAdd()">Add</button>
+{{msg}}
+<br><br>
+
+<button value="value of button" (click)="onClick($event)">Press me</button>
+<br><br>
+
+<!-- Local/Template reference variable -->
+<input #ltr type="text" name="firstName">
+<button (click)="inputInfo(ltr)">get Info</button>
+<br><br>
+
+<!-- Two way data Binding -->
+<input type="text" [(ngModel)]="demo">
+<p>{{demo}}</p>

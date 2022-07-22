@@ -1,0 +1,78 @@
+<!-- ngIf else-->
+<div class="container">
+    <button (click)="create()">Click me</button>
+    <div *ngIf = "isValid; then thenblock; else elseblock;">
+        <p>Condition is true</p>    
+    </div>
+    <ng-template #thenblock>
+        <p>You are in then block</p>
+    </ng-template>
+    <ng-template #elseblock>
+        <p>You are in else block</p>
+    </ng-template>
+</div>
+<br><br>
+
+
+<!-- ngSwitch -->
+<div class="conatainer">
+    <select (change)="getProductVal($event)">
+        <option value="default">Select Product</option>
+        <option value="Laptop">Laptop</option>
+        <option value="TV">TV</option>
+        <option value="AC">AC</option>
+        <option value="Mobile">Mobile</option>
+    </select>
+    <div [ngSwitch]="selectedProduct">
+        <h2 *ngSwitchDefault>Select Product</h2>
+        <h2 *ngSwitchCase="'Laptop'">Laptop</h2>
+        <h2 *ngSwitchCase="'TV'">TV</h2>
+        <h2 *ngSwitchCase="'AC'">AC</h2>
+        <h2 *ngSwitchCase="'Mobile'">Mobile</h2>
+    </div>
+</div>
+<br><br>
+
+
+<!-- ngFor -->
+<table>
+    <thead class="thead-dark">
+        <tr>
+            <th>Serial Number</th>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Warranty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of products; index as i">
+            <td>{{i+1}}</td>
+            <td><img src="{{x.proimg}}"></td>
+            <td>{{x.name}}</td>
+            <td>{{x.price}}</td>
+            <td>{{x.warranty}}</td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+
+
+<!-- push and splice -->
+<input #info type="text">
+<button class="btn btn-success" (click)="createUser(info)">Create</button>
+<button class="btn btn-danger" (click)="removeUser()">Remove</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of users; index as i">
+            <td>{{x.name}}</td>
+            <td><button (click)="removeItem(i)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>

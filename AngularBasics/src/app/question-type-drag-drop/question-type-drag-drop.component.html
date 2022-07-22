@@ -1,0 +1,61 @@
+<!-- <div cdkDropListGroup>
+    <div class="col-md-12">
+        <div class="example-container">
+            <h2>Owen has 2 cars. His friend gives him 4 cars. How many cars does he have now? Click and drag the cars into the box to show the answer.</h2>        
+            <div
+                cdkDropList
+                [cdkDropListData]="question1"
+                class="d-flex example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of question1" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="example-container">
+            <h2>Answer</h2>       
+            <div
+                cdkDropList
+                [cdkDropListData]="answer"
+                class="d-flex example-list"
+                (cdkDropListDropped)="drop1($event)">
+                <div class="example-box" *ngFor="let item of answer" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div>
+    <li *ngFor='let in of counter(5) ;let i = index'>{{i}}</li>
+</div>
+
+
+
+<!-- <div cdkDropListGroup>
+    <div class="col-md-4">
+        <div class="example-container">
+            <h2>Click and drag all the squares to the box below.</h2>        
+            <div
+                cdkDropList
+                [cdkDropListData]="question"
+                class="d-flex example-list flex-wrap"
+                (cdkDropListDropped)="drop2($event)">
+                <div class="example-box" *ngFor="let item of question" [appMath]="item" cdkDrag></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="example-container">
+            <h2>Answer</h2>       
+            <div
+                cdkDropList
+                [cdkDropListData]="answer1"
+                class="d-flex example-list"
+                (cdkDropListDropped)="drop3($event)">
+                <div class="example-box" *ngFor="let item of answer1" [appMath]="item" cdkDrag></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+  
+<!-- <app-addexplantion></app-addexplantion> -->

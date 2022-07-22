@@ -1,0 +1,11 @@
+.navContainer {
+    background-color: lightsteelblue;
+    padding: 1%;
+}
+#heading {
+    font-size: large;
+    font-weight: bolder;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

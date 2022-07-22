@@ -1,0 +1,16 @@
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+     <label for="username">Enter username</label> 
+    <input type="text" [formControl]="username"><br><br>
+
+    <label for="name">Name: </label>
+    <input id="name" type="text" [formControl]="name">
+    <button type="submit">submit</button>
+</form>
+<p>{{name.value}}</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    email   <input type="text" formControlName="email"><br><br>
+    phone number    <input type="text" formControlName="phoneNo"><br><br>
+    password    <input type="password" formControlName="password">
+    <button type="submit">Submit</button>
+</form>
